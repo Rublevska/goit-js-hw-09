@@ -12,7 +12,7 @@ function onSubmitClick(evt) {
   const step = Number(form.step.value);
 
   for (let i = 0; i < amount; i++) {
-    newDelay = firstDelay + i * step;
+    const newDelay = firstDelay + i * step;
     createPromise(i, newDelay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
