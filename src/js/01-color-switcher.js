@@ -13,12 +13,14 @@ function startColorChange() {
   }
   changeColorStarted = true;
   startBtn.disabled = true;
+  stopBtn.disabled = false;
   timerId = setInterval(changeColor, 1000);
 }
 
 function stopColorChange() {
   clearInterval(timerId);
   startBtn.disabled = false;
+  stopBtn.disabled = true;
   changeColorStarted = false;
 }
 
