@@ -8,6 +8,7 @@ form.addEventListener('submit', onSubmitClick);
 function onSubmitClick(evt) {
   evt.preventDefault();
   Block.dots('.js-submit');
+
   const amount = Number(form.amount.value);
   const firstDelay = Number(form.delay.value);
   const step = Number(form.step.value);
